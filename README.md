@@ -66,6 +66,7 @@ new Promise(function (resolve, reject) {
     return result * 4;
   });
 ```
+expample:-
 ```
 const fetchData = new Promise((resolve, reject) => {
   fetch("https://jsonplaceholder.typicode.com/users")
@@ -91,4 +92,36 @@ fetchData
     console.error(error);
   });
 ```
+
+### 3.What is async/await ?
+
+Async/await is a modern approach to handling asynchronous code in JavaScript. It provides a more concise and readable way to work with Promises and async operations, effectively avoiding the “Callback Hell” and improving the overall structure of asynchronous code.
+In JavaScript, the async keyword is used to define an asynchronous function, which returns a Promise.
+Within an async function, the await keyword is used to pause the execution of the function until a Promise is resolved, effectively allowing for synchronous-looking code while working with asynchronous operations.
+
+```
+async function fetchData() {
+  try {
+    const data = await fetch('https://example.com/data');
+    const jsonData = await data.json();
+    return jsonData;
+  } catch (error) {
+    throw error;
+  }
+}
+
+// Using the async function
+fetchData()
+  .then((jsonData) => {
+    // Handle the retrieved data
+  })
+  .catch((error) => {
+    // Handle errors
+  });
+```
+In this example, the fetchData function is defined as an async function, and it uses the await keyword to pause the execution and wait for the fetch and json operations, effectively working with Promises in a way that resembles synchronous code.
+
+
+
+
 
