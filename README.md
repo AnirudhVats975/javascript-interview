@@ -9,7 +9,7 @@ Also, Javascript is Synchronous and blocking in nature. meaning that code is exe
 However, JavaScript also has asynchronous capabilities, which allow certain operations to be executed independently of the main execution thread. This is commonly achieved through mechanisms like callbacks, promises, async/await, and event listeners. These asynchronous features enable JavaScript to handle tasks such as fetching data, handling user input, and performing I/O operations without blocking the main thread, making it suitable for building responsive and interactive web applications.
 
 
-### 1.What is Promise and Promise chaining?
+### 2.What is Promise and Promise chaining?
 
 Promise: A Promise is an object in JavaScript used for asynchronous computations. It represents the result of an asynchronous operation, the result may be resolved or rejected.
 
@@ -120,6 +120,78 @@ fetchData()
   });
 ```
 In this example, the fetchData function is defined as an async function, and it uses the await keyword to pause the execution and wait for the fetch and json operations, effectively working with Promises in a way that resembles synchronous code.
+
+
+### 4.Describe Arrow functions.
+
+The ES6 Javascript version introduced Arrow functions. With the Arrow functions, we can declare functions using new and shorter syntax. These functions can only be used as function expressions. The declaration of these functions is done without using the function keyword. Moreover, if there is a single returning expression, then even the return keyword is not needed. Additionally, wherever the code occurs in a single line only, we can omit the curly {} braces. If there is only one argument in a function, then we can omit even the () parenthesis. ?
+
+### 4.What are classes in Javascript?
+
+Classes in Javascript are templates for building objects. Classes bind the data with code so that the data works as per the code. They were introduced in the ES6 version of Javascript and while they were created on prototypes, they also have syntax and semantics that are not common with ES5. Classes can be seen as special functions. There are two components of class syntax: class expressions and class declarations.
+
+Class expressions are one of the ways to define classes. They may or may not have names. If a class expression has a name, it is held locally in the class body but can be accessed through the name property. Before using class expressions, one must declare them.
+
+Another way to define classes is class declaration. For declaring a class, the class keyword must be followed by the class name.
+
+One class may use the properties of methods of another class by using the extend keyword. Classes in Javascript must follow the strict mode. If the strict mode is not followed, errors will appear.
+
+```
+// Class Declaration
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  greet() {
+    console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+  }
+}
+
+// Creating an instance of the Person class
+const person1 = new Person('Alice', 30);
+person1.greet();
+```
+
+```
+
+// Unnamed Class Expression
+const Animal = class {
+  constructor(type, sound) {
+    this.type = type;
+    this.sound = sound;
+  }
+
+  makeSound() {
+    console.log(`${this.type} makes ${this.sound} sound.`);
+  }
+};
+
+// Creating an instance of the Animal class
+const animal1 = new Animal('Dog', 'Bark');
+animal1.makeSound(); // Output: Dog makes Bark sound.
+
+// Named Class Expression
+const Car = class Car {
+  constructor(model, year) {
+    this.model = model;
+    this.year = year;
+  }
+
+  displayInfo() {
+    console.log(`This is a ${this.year} ${this.model}.`);
+  }
+};
+
+// Creating an instance of the Car class
+const car1 = new Car('Toyota Corolla', 2020);
+car1.displayInfo();
+
+```
+
+
+
 
 
 
