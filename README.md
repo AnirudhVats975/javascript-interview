@@ -190,6 +190,80 @@ car1.displayInfo();
 
 ```
 
+### 6.Methods for Defining JavaScript Objects?
+1.JavaScript Object Literal
+```
+ const person = {
+  name : "anirudh",
+  age  :25,
+  geetingData : function() {
+  console.log(`Hello, my name is ${this.name}`);
+  }
+ } 
+ person.geetingData();
+```
+
+
+2.Using the new Object() syntax
+```
+ const person = new Object(); 
+  person.name = "anirudh",
+  person.age  =25,
+  person.geetingData = function() {
+  console.log(`Hello, my name is ${this.name}`);
+  }
+ 
+ 
+ person.geetingData();
+```
+
+3.Constructor Functions
+```
+function Person(name, age){
+ this.name = name,
+ this.age = age,
+ this.geetingData = function() {
+  console.log(`my name is ${this.name} and my age is ${this.age}`)
+ }
+}
+ 
+const person1 = new Person("anriudh", 20);
+person1.geetingData();
+ 
+```
+4.ES6 Classes
+```
+class Person{
+   constructor(name, age){
+    this.name = name,
+    this.age = age
+   }   
+   getingData() {
+    console.log(`my nmae is ${this.name} and my age ${this.age}`)
+   }
+}
+ const person1 = new Person("anirudh", 25);
+ person1.getingData();
+```
+5.Object.create() Method
+
+```
+ const person = {
+  geeting : function(){
+    console.log(`my name is ${this.name} and my age is ${this.age}`)
+  }
+ }
+ 
+ const Person1 = Object.create(person);
+  Person1.name = "anirudh";
+  Person1.age = 25;
+  
+  Person1.geeting();
+
+```
+
+
+
 
 
 
