@@ -126,7 +126,7 @@ In this example, the fetchData function is defined as an async function, and it 
 
 The ES6 Javascript version introduced Arrow functions. With the Arrow functions, we can declare functions using new and shorter syntax. These functions can only be used as function expressions. The declaration of these functions is done without using the function keyword. Moreover, if there is a single returning expression, then even the return keyword is not needed. Additionally, wherever the code occurs in a single line only, we can omit the curly {} braces. If there is only one argument in a function, then we can omit even the () parenthesis. ?
 
-### 4.What are classes in Javascript?
+### 5.What are classes in Javascript?
 
 Classes in Javascript are templates for building objects. Classes bind the data with code so that the data works as per the code. They were introduced in the ES6 version of Javascript and while they were created on prototypes, they also have syntax and semantics that are not common with ES5. Classes can be seen as special functions. There are two components of class syntax: class expressions and class declarations.
 
@@ -261,6 +261,19 @@ class Person{
   Person1.geeting();
 
 ```
+
+### 6.What's the difference between undefined and not defined in JavaScript?
+JavaScript if you try to use a variable that doesn't exist and has not been declared, then JavaScript will throw an error var name is not defined and the script will stop executing thereafter. But If you use typeof undeclared_variable then it will return undefined.
+
+```
+console.log(myname); //not define
+
+console.log(typeof(myname)); //undefine
+```
+
+### 7.What is “closure” in javascript? Can you provide an example?
+
+
 
 
 
