@@ -271,7 +271,32 @@ console.log(myname); //not define
 console.log(typeof(myname)); //undefine
 ```
 
-### 7.What is “closure” in javascript? Can you provide an example?
+### 7.JavaScript Patterns
+
+### Design Patterns  :-
+Design patterns are concepts to performantly solve commonly recurring problems in software architecture.
+Over the years, the JavaScript ecosystem and language has changed rapidly, and design patterns that used to be valuable some years ago may not be as valuable as they used to be.
+
+### 1.Module Pattern
+Split up your code into smaller, reusable pieces
+
+ES2015 introduced built-in JavaScript modules. A module is a file containing JavaScript code and makes it easy to expose and hide certain values.
+The module pattern is a great way to split a larger file into multiple smaller, reusable pieces. It also promotes code encapsulation, since the values within modules are kept private inside the module by default, and cannot be modified. Only the values that are explicitly exported with the export keyword are accessible to other files.
+
+Key Characteristics of the Module Pattern:-
+
+Encapsulation: It encapsulates private variables and methods to prevent them from being accessed directly from the outside.
+Public API: It exposes only certain methods and properties, creating a clear interface for interacting with the module.
+Self-contained: Each module can be developed and tested independently.
+
+Advantages of the Module Pattern :-
+
+Code Organization: It helps in organizing code into manageable and self-contained units.
+Encapsulation: It hides implementation details, exposing only the necessary parts.
+Reusability: Modules can be easily reused across different parts of the application.
+Maintainability: Encapsulated code is easier to maintain and test.
+
+
 
 
 
