@@ -380,6 +380,59 @@ console.log(second_person);
 
 ```
 
+### 8. impliment the deep clone function?
+
+```
+function deepClone(obj) {
+  // Check if the input is null or not an object
+  if (obj === null || typeof obj !== 'object') {
+    return obj;
+  }
+
+  // Handle Date objects
+  if (obj instanceof Date) {
+    return new Date(obj);
+  }
+
+  // Handle Array
+  if (Array.isArray(obj)) {
+    const copy = [];
+    for (let i = 0; i < obj.length; i++) {
+      copy[i] = deepClone(obj[i]);
+    }
+    return copy;
+  }
+
+  // Handle Object
+  const copy = {};
+  for (const key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      copy[key] = deepClone(obj[key]);
+    }
+  }
+
+  return copy;
+}
+
+// Example usage:
+const original = {
+  a: 1,
+  b: {
+    c: 2,
+    d: [3, 4],
+    e: new Date(),
+  },
+};
+
+const deepCopy = deepClone(original);
+
+console.log(deepCopy); // { a: 1, b: { c: 2, d: [3, 4], e: <Date> } }
+console.log(deepCopy.b === original.b); // false (different objects)
+
+```
+
+
+
 
 
 
