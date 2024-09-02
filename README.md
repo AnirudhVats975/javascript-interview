@@ -431,6 +431,75 @@ console.log(deepCopy.b === original.b); // false (different objects)
 
 ```
 
+### 8.What is a Polyfill?
+A piece of code called polyfill is used to add support for more recent features in earlier browsers that don't already have native support for them.
+For instance, let's pretend 💭 that as part of their language iteration, JavaScript releases a new function, let's say x. Now, this feature might not be supported by all older browsers. However, as developers, we would prefer that our apps function across all browsers. Using bespoke code, polyfills assist us in making this achievable.
+
+### Polyfill for map()
+
+```
+Array.prototype.myMap =  function(callback){
+   let temp = [];
+   for(let i =0; i< this.length; i++){
+     temp.push(callback(this[i],i,this));
+   }
+   
+   return temp;
+}
+
+const nums=[1,2,3,4];
+const multiply=nums.myMap((x)=>{
+    return x*2;
+})
+console.log(multiply);
+```
+
+### Polyfill for filter()
+
+```
+
+Array.prototype.myFilter=function(callback){
+    let temp=[];
+    for(let i=0;i<this.length;i++)
+    {
+        if(callback(this[i],i,this))
+            temp.push(this[i]);
+    }
+    return temp;
+}
+//Performing filter method through custom made filter called myFilter
+const nums=[1,2,3,4];
+const FilterOdd=nums.myFilter((x)=>{
+   return x%2;
+})
+console.log(FilterOdd);
+
+```
+
+### Polyfill for reduce()
+
+```
+Array.prototype.myReduce=function(callback,initial_value){
+    var acc=initial_value;
+    for(let i=0;i<this.length;i++)
+    {
+        acc=acc?callback(acc,this[i],i,this):this[i];
+    }
+    return acc;
+
+}
+//Performing reduce method through custom made reduce called myReduce
+const nums=[1,2,3,4];
+const sum=nums.myReduce((acc,curr,i,nums)=>{
+   return acc+curr;
+},0);
+console.log(sum)
+
+```
+
+
+
+
 
 
 
