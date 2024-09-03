@@ -262,7 +262,7 @@ class Person{
 
 ```
 
-### 6.What's the difference between undefined and not defined in JavaScript?
+### 7.What's the difference between undefined and not defined in JavaScript?
 JavaScript if you try to use a variable that doesn't exist and has not been declared, then JavaScript will throw an error var name is not defined and the script will stop executing thereafter. But If you use typeof undeclared_variable then it will return undefined.
 
 ```
@@ -271,7 +271,7 @@ console.log(myname); //not define
 console.log(typeof(myname)); //undefine
 ```
 
-### 7.JavaScript Patterns
+### 8.JavaScript Patterns
 
 ### Design Patterns  :-
 Design patterns are concepts to performantly solve commonly recurring problems in software architecture.
@@ -297,7 +297,7 @@ Reusability: Modules can be easily reused across different parts of the applicat
 Maintainability: Encapsulated code is easier to maintain and test.
 
 
-### 7.JavaScript deep copy and  shallow copy with example.
+### 9.JavaScript deep copy and  shallow copy with example.
 
 ### Shallow Copy
 
@@ -380,7 +380,7 @@ console.log(second_person);
 
 ```
 
-### 8. impliment the deep clone function?
+### 10. impliment the deep clone function?
 
 ```
 function deepClone(obj) {
@@ -431,7 +431,7 @@ console.log(deepCopy.b === original.b); // false (different objects)
 
 ```
 
-### 8.What is a Polyfill?
+### 11.What is a Polyfill?
 A piece of code called polyfill is used to add support for more recent features in earlier browsers that don't already have native support for them.
 For instance, let's pretend 💭 that as part of their language iteration, JavaScript releases a new function, let's say x. Now, this feature might not be supported by all older browsers. However, as developers, we would prefer that our apps function across all browsers. Using bespoke code, polyfills assist us in making this achievable.
 
@@ -496,6 +496,33 @@ const sum=nums.myReduce((acc,curr,i,nums)=>{
 console.log(sum)
 
 ```
+
+
+### 12.f Web APIs provided by the browser?
+
+### 1.Storage API
+The Storage API in JavaScript provides mechanisms for storing data on the client side, allowing web applications to persist data even after the user navigates away from the page or closes the browser. The two primary components of the Storage API are LocalStorage and SessionStorage.
+
+ ### 1 LocalStorage
+Persistent Storage: Data stored in LocalStorage is persistent, meaning it remains available even after the browser is closed and reopened. The data is stored per domain, so it’s available across all pages of a web application on the same domain.
+Capacity: Typically, LocalStorage can store around 5-10 MB of data, depending on the browser.
+Synchronous API: All operations on LocalStorage are synchronous, meaning they block the main thread while reading or writing data.
+
+```
+localStorage.setItem('username', 'JohnDoe');
+
+const username = localStorage.getItem('username');
+console.log(username); // Outputs: JohnDoe
+
+localStorage.removeItem('username');
+
+localStorage.clear();
+
+console.log(localStorage.length);
+```
+
+
+
 
 
 
