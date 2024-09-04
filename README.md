@@ -597,6 +597,17 @@ let fullName =  person.fullName.bind(member);
 ```
 
 
+### 13. impliment the deep clone function?
+
+Currying in JavaScript?
+At its core, currying is a functional programming technique that involves breaking down a function that takes multiple arguments into a series of functions that take one argument each. This creates a chain of functions, where each function returns another function until the final result is achieved.
+
+### Advantages of function Currying in JavaScript
+Reusability: Currying breaks down a complex function into smaller, reusable units. Each curried function focuses on a single argument, making it easier to understand and maintain. These smaller functions can be reused across different parts of your codebase.
+Partial Function Application: Currying allows you to create partially applied functions, where you fix some of the arguments in advance and leave the rest to be supplied later. This is useful when you have a function that requires some parameters to be the same across multiple calls.
+Code Composition: Currying encourages the creation of new functions by composing existing ones. The currying function in JavaScript is a higher-order function. Higher-order functions are those that either take another function as an argument or return a function. It uses functional programming which results in cleaner, more expressive code.
+
+
 
 
 
