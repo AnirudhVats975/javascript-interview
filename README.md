@@ -544,6 +544,58 @@ The call() method in JavaScript is used to invoke a function with a specified th
 const result= getInfo.call(person1, "delhi");
 ```
 
+### 13.What is apply method?
+
+Invokes the function with a given this value and allows you to pass in arguments as an array.
+
+```
+ const person1 = {
+  name : "anirudh",
+  work  : "front end developer"
+ }
+ 
+  const person2 = {
+  name : "ashu",
+  work  : "backend end developer"
+ }
+ 
+ function getInfo(city){
+  console.log("city", city)
+  console.log(this.name + " " + this.work + " " +  "work in" +  " " +  city);
+ }
+ 
+const result= getInfo.apply(person1, ["delhi"]);
+
+```
+
+
+### 12.What is bind method?
+
+With the bind() method, an object can borrow a method from another object.
+
+or 
+
+returns a new function, allowing you to pass any number of arguments
+
+```
+const person = {
+  firstName:"John",
+  lastName: "Doe",
+  fullName: function () {
+  return  this.firstName + " " + this.lastName;
+  }
+}
+
+const member = {
+  firstName:"Hege",
+  lastName: "Nilsen",
+}
+
+let fullName =  person.fullName.bind(member);
+ console.log(fullName())
+
+```
+
 
 
 
