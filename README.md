@@ -522,6 +522,29 @@ console.log(localStorage.length);
 ```
 
 
+### 12.What is call method?
+The call() method in JavaScript is used to invoke a function with a specified this value and optional arguments. It allows you to execute a function in a specific context, overriding the default value of this.
+
+
+```
+ const person1 = {
+  name : "anirudh",
+  work  : "front end developer"
+ }
+ 
+  const person2 = {
+  name : "ashu",
+  work  : "backend end developer"
+ }
+ 
+ function getInfo(city){
+  console.log(this.name + " " + this.work + " " +  "work in" +  " " +  city);
+ }
+ 
+const result= getInfo.call(person1, "delhi");
+```
+
+
 
 
 
