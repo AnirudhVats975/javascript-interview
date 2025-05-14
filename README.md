@@ -607,11 +607,83 @@ Reusability: Currying breaks down a complex function into smaller, reusable unit
 Partial Function Application: Currying allows you to create partially applied functions, where you fix some of the arguments in advance and leave the rest to be supplied later. This is useful when you have a function that requires some parameters to be the same across multiple calls.
 Code Composition: Currying encourages the creation of new functions by composing existing ones. The currying function in JavaScript is a higher-order function. Higher-order functions are those that either take another function as an argument or return a function. It uses functional programming which results in cleaner, more expressive code.
 
+### 14.What are the data types in JavaScript?
+JavaScript has 8 data types, divided into primitive and non-primitive types.
 
+✅ Primitive Data Types (immutable):
+String – Represents textual data.
+Example: "Hello"
+Definition: A sequence of characters enclosed in quotes.
 
+Number – Represents numeric values.
+Example: 10, 3.14
+Definition: Any number, including integers and decimals.
 
+BigInt – Used for very large integers.
+Example: 12345678901234567890n
+Definition: A numeric type that can represent integers beyond Number limits.
 
+Boolean – Represents true or false values.
+Example: true, false
+Definition: Used for logical operations and conditions.
 
+Undefined – A variable declared but not assigned.
+Example: let x; → x is undefined
+Definition: Automatically assigned when no value is given.
+
+Null – Represents intentional absence of any value.
+Example: let y = null;
+Definition: Manually assigned to indicate "no value".
+
+Symbol – Represents a unique and immutable value.
+Example: let sym = Symbol("id");
+Definition: Often used as unique keys in objects.
+
+✅ Non-Primitive (Reference) Data Type:
+Object – Collection of key-value pairs.
+Example: { name: "John", age: 25 }
+Definition: Used to store multiple values in a single variable.
+
+### 15.Explain the difference between `undefined` and `null`.?
+
+Definition of undefined:
+undefined is a primitive data type in JavaScript. It means a variable has been declared but has not been assigned any value yet.
+
+```
+let a;
+console.log(a); // undefined
+
+```
+
+null is a special primitive value in JavaScript that represents the intentional absence of any object value. It is manually assigned by the developer.
+
+```
+let b = null;
+console.log(b); // null
+
+```
+
+### 16. How does JavaScript handle types?
+## JavaScript is a dynamically typed language.
+This means you don’t need to declare the data type of a variable. The type is determined automatically at runtime based on the value assigned.
+
+```
+Dynamic Typing: Variables can hold values of any type, and the type can change.
+
+let x = 5;      // x is a number
+x = "hello";    // now x is a string
+
+```
+
+```
+Type Coercion: JavaScript automatically converts types when needed.
+
+"5" + 1   // "51" (number 1 is coerced to string)
+"5" - 1   // 4   (string "5" is coerced to number)
+
+```
+
+### 17.
 
 
 
