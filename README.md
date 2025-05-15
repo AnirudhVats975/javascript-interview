@@ -664,7 +664,7 @@ console.log(b); // null
 ```
 
 ### 16. How does JavaScript handle types?
-## JavaScript is a dynamically typed language.
+### JavaScript is a dynamically typed language.
 This means you don’t need to declare the data type of a variable. The type is determined automatically at runtime based on the value assigned.
 
 ```
